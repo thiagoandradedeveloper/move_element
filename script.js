@@ -9,6 +9,10 @@ window.onload = () => {
         xChild = event.offsetX
         yChild = event.offsetY
     })
+    elementChild.addEventListener("click",(event)=>{
+        xChild = event.offsetX
+        yChild = event.offsetY
+    })
     
     element.addEventListener("dragend",(event)=>{        
         x = event.clientX;
