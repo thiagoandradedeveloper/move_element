@@ -3,23 +3,19 @@ window.onload = () => {
     const elementChild = document.getElementById('elemento');
 
     /*
-        eventos de mouse: mouseup, mousedown, 
+        eventos de mouse: mouseup,  
             mouseenter => ao entrar o mouse
             mousedown => é o mesmo que click
+            contextmenu => click botao direito
     */
-
-    element.addEventListener("mousedown",()=>{
-        alert()
-    })
     
     element.addEventListener("dragend",(event)=>{
-
-        alert(elementChild.offsetWidth+'-'+elementChild.offsetHeight+'-'+elementChild.offsetParent+'-'+elementChild.offsetLeft+'-'+element.offsetTop)        
-
+        
+        //alert(elementChild.offsetWidth+'-'+elementChild.offsetHeight+'-'+elementChild.offsetParent+'-'+elementChild.offsetLeft+'-'+element.offsetTop)        
         x = event.clientX;
         y = event.clientY;
-        elementChild.style.top = (y-50) + "px";
-        elementChild.style.left = (x-50) + "px";
+        elementChild.style.top = (y-10-Math.floor((elementChild.offsetHeight/2))) + "px";
+        elementChild.style.left = (x-10-Math.floor((elementChild.offsetWidth/2))) + "px";
     })
 
     element.addEventListener("click",(event)=>{
