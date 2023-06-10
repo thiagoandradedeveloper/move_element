@@ -1,16 +1,19 @@
 window.onload = () => {
     const element = document.getElementById('container');
     const elementChild = document.getElementById('elemento');
+
+    let xChild;
+    let yChild;
+
+    elementChild.addEventListener("mousedown",(event)=>{
+        xChild = event.offsetX
+        yChild = event.offsetY
+    })
     
     element.addEventListener("dragend",(event)=>{        
         x = event.clientX;
         y = event.clientY;
-        elementChild.style.top = (y-10-Math.floor((elementChild.offsetHeight/2))) + "px";
-        elementChild.style.left = (x-10-Math.floor((elementChild.offsetWidth/2))) + "px";
-    })
-
-    element.addEventListener("click",(event)=>{
-        event.clientX = 200;
-        event.clientY = 200;
+        elementChild.style.top = (y-yChild-8) + "px";
+        elementChild.style.left = (x-xChild-8) + "px";
     })
 }

@@ -37,3 +37,9 @@ element.addEventListener("dragend",(event)=>{
         alert(tamanho)
         
         //alert(elementChild.offsetWidth+'-'+elementChild.offsetHeight+'-'+elementChild.offsetParent+'-'+elementChild.offsetLeft+'-'+element.offsetTop)        
+
+
+        event.offsetX
+        event.clientX
+        event.movementX
+        event.pageX
